@@ -58,3 +58,27 @@ pip install -r requirements.txt
 python generate_pdfs.py
 python ingest.py
 streamlit run app.py
+
+📌 Example Queries
+
+What is the eligibility for admission?
+
+What is the hostel curfew time?
+
+What is the B.Tech fee structure?
+
+📈 Future Enhancements
+
+Real LLM integration (OpenAI / Gemini)
+
+Admin dashboard for document upload
+
+Multilingual support
+
+Authentication for students and staff
+
+
+👨‍💻 Author
+
+Avinash Raj
+B.Tech IT, 3rd Year
