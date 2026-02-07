@@ -1,0 +1,41 @@
+PROJECT DOCUMENTATION – UNIVERSITY FAQ ASSISTANT
+
+1. Introduction
+The University FAQ Assistant is an AI-based system designed to answer common student queries using official university documents. The objective of the project is to reduce manual workload on administrative staff while providing fast and accurate responses to students.
+
+2. System Architecture
+The system follows a Retrieval-Augmented Generation (RAG) architecture. Instead of generating answers blindly, the assistant retrieves relevant information from institutional documents and bases its responses strictly on that data.
+
+Major components include:
+- Document Ingestion Module
+- Vector Database (FAISS)
+- Query Processing Module
+- Answer Generation Module
+- Web-based User Interface
+
+3. Document Ingestion
+University documents such as admission policies, fee structures, and hostel rules are provided in PDF format. These documents are parsed using a PDF reader, and meaningful text is extracted page-wise. The extracted text is stored along with metadata such as file name and page number.
+
+4. Vectorization and Storage
+Each extracted text segment is converted into numerical vector representations (embeddings). These embeddings are stored in a FAISS vector database, enabling fast similarity-based retrieval. This design ensures scalability and efficient searching even with large document collections.
+
+5. Query Processing
+When a user enters a query through the web interface, the query is converted into a vector representation. FAISS is used to retrieve the most relevant document segments based on vector similarity.
+
+6. Answer Generation
+The retrieved document context is passed to the answer generation module. For demonstration purposes, a mock answer generator is used to produce context-aware responses while maintaining a production-ready architecture that supports future integration with real Large Language Models (LLMs).
+
+7. User Interface
+The frontend is implemented using Streamlit, providing a clean and interactive chat interface. Users can submit queries and receive responses along with document source references.
+
+8. Error Handling and Reliability
+The system includes safeguards such as file-type validation, missing-index checks, and fallback responses to ensure smooth execution and prevent runtime failures.
+
+9. Future Scope
+- Integration with real LLM APIs (OpenAI, Gemini)
+- Admin dashboard for dynamic document uploads
+- Multilingual support
+- Authentication and role-based access
+
+10. Conclusion
+The University FAQ Assistant demonstrates how Retrieval-Augmented Generation can be applied to real-world academic environments. The project emphasizes architectural correctness, scalability, and transparency, making it suitable for academic evaluation and future expansion.
